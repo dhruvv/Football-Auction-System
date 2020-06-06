@@ -1,0 +1,24 @@
+<html>
+<head>
+<!--<link rel="stylesheet" href="w3.css">-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="w3-container w3-blue">
+	<h1>Koulutos auction control panel</h1>
+	<h2>Current player : {{ currentPlayerName }}</h2>
+	<h1>Group : {{curPos}}
+	<h3>Position : {{ currentPosition }}</h3>
+	<h3>Rating : {{ currentRating }}</h3>
+	<h4>Starting price : {{currentBid}}</h4>
+</div>
+<
+	<form class="w3-container w3-card-4 w3-light-grey" action="/acontrolpanelactionhandler">
+		<label>Final Bid for Player</label>
+		<input class="w3-input" type="text" name="finalbid">
+		<label>Name of buying Team</label>
+		<input type="text" class="w3-input" name="teamname">		
+		<input type="submit" value="Update value and move to Next Player" class="w3-button w3-black">
+	</form>
+</body>
