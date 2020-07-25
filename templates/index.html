@@ -1,0 +1,61 @@
+    <html>
+<head>
+<!--<link rel="stylesheet" href="w3.css">-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="2" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<title>Koulutos Auction</title>
+<style>
+	.responsive {
+	  max-width: 15%;
+	  height: 15%;
+	}
+	p{
+		font-family: 'Roboto', sans-serif;
+		font-size: 40px;
+		color: #FFD700;
+	}
+	h3{
+		color: #FFD700;
+	}
+	h4{
+		color:#FFD700;
+		font-size: 5px;
+	}
+	</style>
+</head>
+<body>
+<div class="w3-row-padding">
+<div class="w3-container w3-card-4 w3-panel w3-padding-16" style="background-color:#283a6b">
+	<left>
+	<p>
+	<image src="https://raw.githubusercontent.com/dhruvv/auctionSystem/master/Auction logo.png" class="responsive"></image>
+	</left>
+	Koulutos Auction
+
+</p>
+</div>
+<div class="w3-container w3-card-4 w3-panel" style="background-color:#283a6b;">
+	<a href="/finances" style="background-color: #FFD700;">View Finances of All teams(NOTE: SLOW!)</a>
+</div>
+<div class="w3-container w3-card-4 w3-panel" style="background-color:#283a6b">
+	<h3>Current player : {{ player[0] }}</h3>
+	<h3>Group : {{player[13]}}
+	<h3>Position : {{ player[13] }}</h3>
+	<h3>Rating : {{ player[9] }}</h3>
+	<h3>Starting price : {{currentBid}}</h3>
+</div>
+<div class="w3-container w3-card-4 w3-panel" style="background-color: #283a6b;">
+	<h3>Player Skill Graph</h3>
+	<img src={{currentImage}}>
+</div>
+</div>
+<div class="w3-container w3-card-4 w3-panel" style="background-color: #283a6b;">
+	<h3>Misc Player Values</h3>
+	{%for i in range(0,lengthVal)%}
+	<h4>{{ colValues[i] }} : {{ player[i] }}</h4>
+	{%endfor%}
+</div>
+</body>
+</html>
