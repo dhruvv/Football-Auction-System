@@ -202,8 +202,9 @@ def update(p,t,b):  # TO BE FIXED FOR NEW FORMAT
 	pName = p[0]
 	pNameCell = indexedTeams[t][0]+str(indexedTeams[t][2])
 	pPriceCell = indexedTeams[t][1]+str(indexedTeams[t][2])
-	fs.update(pNameCell,pName)
-	fs.update(pPriceCell,b)
+	fs.update(pNameCell,pName,value_input_option="USER_ENTERED")
+	print(b)
+	fs.update(pPriceCell,int(b),value_input_option="USER_ENTERED")
 	indexedTeams[t][2] += 1
 
 
